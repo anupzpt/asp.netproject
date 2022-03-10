@@ -1,0 +1,27 @@
+﻿@model List<asp.netproject.Models.asptable>
+@{
+    ViewBag.Title = "Employee";
+}
+
+<h2>Employee</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact</th>
+
+    </tr>
+    @foreach(var data in Model)
+            {
+<tr>
+    <td>@(data.id)  </td>
+    <td>@(data.name)  </td>
+    <td>@(data.address)  </td>
+    <td>@(data.contact)  </td>
+
+</tr>
+            }
+
+</table>
+
