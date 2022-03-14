@@ -1,0 +1,42 @@
+﻿@model List<asp.netproject.Models.record>
+
+@{
+    ViewBag.Title = "record";
+}
+
+<h1>Employee Record</h1>
+<style>
+    .edit {
+        margin-top: 20px;
+    }
+</style>
+<form action="Savedata">
+    <div class="edit">
+
+        <label>First Name:</label>
+        <br />
+        <input type="text" name="Firstname" value="" id="first" />
+
+    </div>
+    <div class="edit">
+        <label>Last Name:</label>
+        <br />
+        <input type="text" name="Lastname" value="" id="last" />
+    </div>
+    <div class="edit">
+        <label>Address:</label>
+        <br />
+        <input type="text" name="Address" value="" id="address" />
+    </div>
+    <div class="edit">
+        <input type="submit" class="btn btn-success" name="submit" value="Submit" />
+
+    </div>
+</form>
+@*<script>
+    var Firstname = document.getElementById("Firstname").value;
+    var Lastname = document.getElementById("Lastname").value;
+    var Address = document.getElementById("Address").value;
+</script>*@
+
+

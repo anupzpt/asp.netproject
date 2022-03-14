@@ -1,0 +1,32 @@
+﻿@model asp.netproject.Models.record
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("UpdateData", "employee"))
+{
+    <input type="hidden" name="id" value="@Model.id" />
+    <div class="edit">
+
+        <label>First Name:</label>
+        <br />
+        <input type="text" name="Firstname" value="@Model.Firstname" id="first" />
+
+    </div>
+    <div class="edit">
+        <label>Last Name:</label>
+        <br />
+        <input type="text" name="Lastname" value="@Model.Lastname" id="last" />
+    </div>
+    <div class="edit">
+        <label>Address:</label>
+        <br />
+        <input type="text" name="Address"  value="@Model.Address" id="address" />
+    </div>
+    <div class="edit">
+        <input type="submit" class="btn btn-success" name="submit" value="Submit" />
+
+    </div>
+}
