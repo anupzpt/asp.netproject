@@ -226,6 +226,8 @@
     <Content Include="Views\employee\Delete.cshtml" />
     <Content Include="Views\Record\student.cshtml" />
     <Content Include="Views\Record\studenttable.cshtml" />
+    <Content Include="Views\Record\Edit.cshtml" />
+    <Content Include="Views\Record\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
