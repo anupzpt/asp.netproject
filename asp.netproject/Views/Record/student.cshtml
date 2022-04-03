@@ -1,40 +1,41 @@
-﻿@model List<asp.netproject.Models.record>
-
+﻿@model List<asp.netproject.Models.student>
 @{
-    ViewBag.Title = "record";
+    ViewBag.Title = "student";
 }
-<a href="@Url.Action("employee","Employee")">Show data</a>
+<a href="@Url.Action("studenttable","Record")">Show data</a>
 
-<h1>Employee Record</h1>
+<h1>Student Record</h1>
 <style>
     .edit {
         margin-top: 20px;
     }
 </style>
-<form action="Savedata">
-    <div class="edit">
+<form action="adddata">
+    <div class="add">
 
         <label>First Name:</label>
         <br />
         <input type="text" name="Firstname" value="" id="first" />
 
     </div>
-    <div class="edit">
+    <div class="add">
         <label>Last Name:</label>
         <br />
         <input type="text" name="Lastname" value="" id="last" />
     </div>
-    <div class="edit">
+    <div class="add">
         <label>Address:</label>
         <br />
         <input type="text" name="Address" value="" id="address" />
     </div>
-    <div class="edit">
+    <div class="add">
+        <label>Contact:</label>
+        <br />
+        <input type="text" name="Contact" value="" id="contact" />
+    </div>
+    <div class="add">
         <input type="submit" class="btn btn-success" name="submit" value="Submit" />
 
     </div>
 </form>
-
-
-
 

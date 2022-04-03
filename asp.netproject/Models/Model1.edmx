@@ -23,9 +23,20 @@
           <Property Name="Lastname" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Firstname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Lastname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="aspdatabaseModelStoreContainer">
           <EntitySet Name="asptable" EntityType="Self.asptable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="records" EntityType="Self.records" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -34,6 +45,7 @@
         <EntityContainer Name="MainEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="asptables" EntityType="aspdatabaseModel.asptable" />
           <EntitySet Name="records" EntityType="aspdatabaseModel.record" />
+          <EntitySet Name="students" EntityType="aspdatabaseModel.student" />
         </EntityContainer>
         <EntityType Name="asptable">
           <Key>
@@ -52,6 +64,16 @@
           <Property Name="Firstname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Lastname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Firstname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lastname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -72,6 +94,17 @@
           <EntitySetMapping Name="records">
             <EntityTypeMapping TypeName="aspdatabaseModel.record">
               <MappingFragment StoreEntitySet="records">
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="students">
+            <EntityTypeMapping TypeName="aspdatabaseModel.student">
+              <MappingFragment StoreEntitySet="student">
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="Lastname" ColumnName="Lastname" />
                 <ScalarProperty Name="Firstname" ColumnName="Firstname" />

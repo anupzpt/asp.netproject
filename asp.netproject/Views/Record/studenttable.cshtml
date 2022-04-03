@@ -1,0 +1,40 @@
+﻿@model List<asp.netproject.Models.student>
+
+@{
+    ViewBag.Title = "studenttable";
+    int sn = 0;
+
+}
+<a href="@Url.Action("student","Record")">Add new record</a>
+
+<h2>studenttable</h2>
+
+
+
+
+<table class="table" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Address</th>
+        <th>Contact</th>
+
+    </tr>
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@(data.id)  </td>
+            <td>@(data.Firstname)  </td>
+            <td>@(data.Lastname)  </td>
+            <td>@(data.Address)  </td>
+            <td>@(data.Contact)  </td>
+
+            @*,name=data.name*@
+            <td><a href="@Url.Action("Edit", new {id=data.id})">Edit</a></td>
+                <td><a href="@Url.Action("Delete", new {id=data.id})">Delete</a></td>
+
+        </tr>
+    }
+
+</table>

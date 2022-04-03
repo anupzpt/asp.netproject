@@ -24,7 +24,7 @@
     <td>@(data.Address)  </td>
     @*,name=data.name*@
     <td><a href="@Url.Action("Edit", new {id=data.id})">Edit</a></td>
-    <td><a href="@Url.Action("Deletedata", new {id=data.id})">Delete</a></td>
+    <td><a href="@Url.Action("Delete", new {id=data.id})">Delete</a></td>
 
 </tr>
     }

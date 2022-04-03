@@ -39,7 +39,11 @@ namespace asp.netproject.Controllers
             db.SaveChanges();
             return RedirectToAction("Employee");
         }
-
+        public ActionResult Delete(int id)
+        {
+            record data =db.records.Find(id);
+            return View(data);
+        }
 
         public ActionResult Deletedata(int id)
         {

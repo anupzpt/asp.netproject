@@ -1,34 +1,31 @@
-﻿@model asp.netproject.Models.record
+﻿
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Delete";
 }
 
-<h2>Edit</h2>
-
-@using (Html.BeginForm("UpdateData", "employee"))
+<h2>Delete</h2>
+@using (Html.BeginForm("Deletedata", "employee"))
 {
     <input type="hidden" name="id" value="@Model.id" />
-    <div class="edit">
+    <div class="delete">
 
         <label>First Name:</label>
         <br />
         <input type="text" name="Firstname" value="@Model.Firstname" id="first" />
 
     </div>
-    <div class="edit">
+    <div class="delete">
         <label>Last Name:</label>
         <br />
         <input type="text" name="Lastname" value="@Model.Lastname" id="last" />
-        <br />
     </div>
-    <div class="edit">
+    <div class="delete">
         <label>Address:</label>
         <br />
-        <input type="text" name="Address"  value="@Model.Address" id="address" />
-        <br />
+        <input type="text" name="Address" value="@Model.Address" id="address" />
     </div>
-    <div class="edit">
-        <input type="submit" class="btn btn-success" name="submit" value="Submit" />
+    <div class="delete">
+        <input type="submit" class="btn btn-success" name="submit" value="Delete" />
 
     </div>
 }
