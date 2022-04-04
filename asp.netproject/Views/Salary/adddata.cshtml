@@ -1,0 +1,38 @@
+﻿@model asp.netproject.Models.employee_salary_details
+@{
+    ViewBag.Title = "adddata";
+}
+
+<h2>adddata</h2>
+<style>
+    .edit{
+        margin-top:20px;
+    }
+</style>
+@using (Html.BeginForm("adddata", "Salary"))
+{
+    <div class="edit">
+
+        <label>Employee Id :</label>
+        <br />
+        <input type="text" name="employee_id" value="" id="employeeid" />
+
+    </div>
+    <div class="edit">
+
+        <label>Salary Paid :</label>
+        <br />
+        <input type="text" name="salary_paid" value="" id="salarypaid" />
+
+    </div>
+    <div class="edit">
+        <label>Paid Date :</label>
+        <br />
+        <input type="date" name="paid_date" value="" id="paiddate" />
+    </div>
+
+    <div class="edit">
+        <input type="submit" class="btn btn-success" name="submit" value="Submit" />
+
+    </div>
+}

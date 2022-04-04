@@ -14,9 +14,18 @@ namespace asp.netproject.Models
     
     public partial class record
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public record()
+        {
+            this.employee_salary_details = new HashSet<employee_salary_details>();
+        }
+    
         public int id { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Address { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<employee_salary_details> employee_salary_details { get; set; }
     }
 }

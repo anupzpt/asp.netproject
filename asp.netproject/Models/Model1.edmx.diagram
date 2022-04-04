@@ -8,6 +8,15 @@
         <EntityTypeShape EntityType="aspdatabaseModel.asptable" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="aspdatabaseModel.record" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="aspdatabaseModel.student" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="aspdatabaseModel.employee_salary_details" Width="1.5" PointX="3.375" PointY="3.75" />
+        <AssociationConnector Association="aspdatabaseModel.FK_employee_salary_details_records" ManuallyRouted="true" >
+          <ConnectorPoint PointX="3.8125" PointY="2.7302864583333339" />
+          <ConnectorPoint PointX="3.8125" PointY="3.0667919270833339" />
+          <ConnectorPoint PointX="3.4583328645676374" PointY="3.0667919270833339" />
+          <ConnectorPoint PointX="3.4583328645676374" PointY="3.41349453125" />
+          <ConnectorPoint PointX="3.8125" PointY="3.41349453125" />
+          <ConnectorPoint PointX="3.8125" PointY="3.75" />
+        </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
