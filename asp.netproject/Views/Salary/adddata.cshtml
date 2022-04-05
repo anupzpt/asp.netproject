@@ -13,9 +13,13 @@
 {
     <div class="edit">
 
-        <label>Employee Id :</label>
+        <label>Employee Name :</label>
+        @*<select>
+           @foreach(var data in ViewBag.empsList)
+        </select>*@
+        @Html.DropDownList("employeeList", null,"Select",htmlAttributes: new {@Name ="employee_id"})
         <br />
-        <input type="text" name="employee_id" value="" id="employeeid" />
+        @*<input type="text" name="employee_id" value="" id="employeeid" />*@
 
     </div>
     <div class="edit">

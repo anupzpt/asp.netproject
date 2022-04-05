@@ -4,19 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2ffe0d6e4fef4c4aacd6ee3cccb57a9d" Name="Diagram1">
-        <EntityTypeShape EntityType="aspdatabaseModel.asptable" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="aspdatabaseModel.record" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="aspdatabaseModel.student" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="aspdatabaseModel.employee_salary_details" Width="1.5" PointX="3.375" PointY="3.75" />
-        <AssociationConnector Association="aspdatabaseModel.FK_employee_salary_details_records" ManuallyRouted="true" >
-          <ConnectorPoint PointX="3.8125" PointY="2.7302864583333339" />
-          <ConnectorPoint PointX="3.8125" PointY="3.0667919270833339" />
-          <ConnectorPoint PointX="3.4583328645676374" PointY="3.0667919270833339" />
-          <ConnectorPoint PointX="3.4583328645676374" PointY="3.41349453125" />
-          <ConnectorPoint PointX="3.8125" PointY="3.41349453125" />
-          <ConnectorPoint PointX="3.8125" PointY="3.75" />
-        </AssociationConnector>
+      <Diagram DiagramId="0548bbae3e104ff38b57aa7cf15145e1" Name="Diagram1">
+        <EntityTypeShape EntityType="aspdatabaseModel.asptable" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="aspdatabaseModel.employee_salary_details" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="aspdatabaseModel.record" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="aspdatabaseModel.student" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="aspdatabaseModel.FK_employee_salary_details_records" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

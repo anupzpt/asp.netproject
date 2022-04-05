@@ -1,0 +1,35 @@
+﻿@model asp.netproject.Models.employee_salary_details
+@{
+    ViewBag.Title = "Editsalary";
+}
+
+<h2>Editsalary</h2>
+@using (Html.BeginForm("UpdateSalaryData", "Salary"))
+{
+    <input type="hidden" name="id" value="@Model.id" />
+    <div class="edit">
+
+        <label>Employee Name:</label>
+        <br />
+        @Html.DropDownList("employeeList", null, "Select", htmlAttributes: new { @Name = "employee_id" })
+
+
+    </div>
+    <div class="edit">
+
+        <label>Salary Paid:</label>
+        <br />
+        <input type="text" name="salary_paid" value="@Model.salary_paid" id="salarypaid" />
+
+    </div>
+    <div class="edit">
+        <label>Paid Date :</label>
+        <br />
+        <input type="date" name="paid_date" value="@Model.paid_date" id="paiddate" />
+    </div>
+
+    <div class="edit">
+        <input type="submit" class="btn btn-success" name="submit" value="Submit" />
+
+    </div>
+}

@@ -6,7 +6,7 @@
 
 <h2>Salary</h2>
 <style>
-    .table{
+    .table,tb{
       border:1px solid black;
 
     }
@@ -21,6 +21,9 @@
             Employee Name
         </th>
         <th>
+            Employee Id
+        </th>
+        <th>
             Salary Amount
         </th>
         <th>
@@ -30,16 +33,18 @@
             Action
         </th>
     </tr>
+ @{   int sn = 0; }
     @foreach (var data in Model)
     {
         <tr>
-           
+           <td>@(++sn)</td>
+            <td>@(data.record.Firstname)</td>
             <td>@(data.employee_id)  </td>
             <td>@(data.salary_paid)  </td>
             <td>@(data.paid_date)  </td>
             @*,name=data.name*@
-            @*<td><a href="@Url.Action("Edit", new {id=data.id})">Edit</a></td>
-            <td><a href="@Url.Action("Delete", new {id=data.id})">Delete</a></td>*@
+            <td><a href="@Url.Action("Editsalary", new {id=data.id})">Edit</a></td>
+            <td><a href="@Url.Action("Delete", new {id=data.id})">Delete</a></td>
 
         </tr>
     }
