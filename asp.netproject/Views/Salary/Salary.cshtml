@@ -33,11 +33,11 @@
             Action
         </th>
     </tr>
- @{   int sn = 0; }
+    @{ int sn = 0; }
     @foreach (var data in Model)
     {
         <tr>
-           <td>@(++sn)</td>
+            <td>@(++sn)</td>
             <td>@(data.record.Firstname)</td>
             <td>@(data.employee_id)  </td>
             <td>@(data.salary_paid)  </td>
@@ -47,7 +47,13 @@
             <td><a href="@Url.Action("Delete", new {id=data.id})">Delete</a></td>
 
         </tr>
-    }
 
+    }
+    <tr>
+        <td colspan="3">Total</td>
+        <td >
+            @(Model.Sum(x=>x.salary_paid))
+        </td>
+    </tr>
 </table>
 

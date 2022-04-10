@@ -1,0 +1,40 @@
+﻿@model asp.netproject.Models.teacher
+
+@{
+    ViewBag.Title = "add";
+}
+
+<h2>add</h2>
+
+<style>
+    .edit {
+        margin-top: 20px;
+    }
+</style>
+@using (Html.BeginForm("adddata", "teacher"))
+{
+<div class="edit">
+
+    <label>Teacher Name :</label>
+
+    <br />
+    <input type="text" name="name" value="" id="teachername" />
+</div>
+    <div class="edit">
+
+        <label> Address :</label>
+        <br />
+        <input type="text" name="address" value="" id="address" />
+
+    </div>
+    <div class="edit">
+        <label>Contact :</label>
+        <br />
+        <input type="text" name="contact" value="" id="contact" />
+    </div>
+
+    <div class="edit">
+        <input type="submit" class="btn btn-success" name="submit" value="Submit" />
+
+    </div>
+}

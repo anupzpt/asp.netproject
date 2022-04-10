@@ -27,7 +27,9 @@ namespace asp.netproject.Models
     
         public virtual DbSet<asptable> asptables { get; set; }
         public virtual DbSet<employee_salary_details> employee_salary_details { get; set; }
+        public virtual DbSet<manager> managers { get; set; }
         public virtual DbSet<record> records { get; set; }
         public virtual DbSet<student> students { get; set; }
+        public virtual DbSet<teacher> teachers { get; set; }
     }
 }

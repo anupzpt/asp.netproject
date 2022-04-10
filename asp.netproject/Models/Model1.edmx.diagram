@@ -5,11 +5,13 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="0548bbae3e104ff38b57aa7cf15145e1" Name="Diagram1">
-        <EntityTypeShape EntityType="aspdatabaseModel.asptable" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="aspdatabaseModel.employee_salary_details" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="aspdatabaseModel.record" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="aspdatabaseModel.student" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <AssociationConnector Association="aspdatabaseModel.FK_employee_salary_details_records" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="aspdatabaseModel.asptable" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="aspdatabaseModel.employee_salary_details" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="aspdatabaseModel.manager" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="aspdatabaseModel.record" Width="1.5" PointX="0.75" PointY="0.875" />
+        <EntityTypeShape EntityType="aspdatabaseModel.student" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="aspdatabaseModel.teacher" Width="1.5" PointX="5.75" PointY="0.75" />
+        <AssociationConnector Association="aspdatabaseModel.FK_employee_salary_details_records" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

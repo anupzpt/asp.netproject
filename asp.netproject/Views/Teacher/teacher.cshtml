@@ -1,0 +1,41 @@
+﻿@model List<asp.netproject.Models.teacher>
+
+@{
+    ViewBag.Title = "teacher";
+}
+<h2>teacher</h2>
+<style>
+    .table, tb {
+        border: 1px solid black;
+    }
+</style>
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Teacher Name
+        </th>
+
+        <th>
+            Address
+        </th>
+        <th>
+            Contact
+        </th>
+    </tr>
+    @foreach (var data in Model)
+    {
+        <tr>
+            <td>@(data.tid)  </td>
+            <td>@(data.name)  </td>
+            <td>@(data.address)  </td>
+            <td>@(data.contact)  </td>
+            @*,name=data.name*@
+            <td><a href="@Url.Action("Editsalary", new {id=data.tid})">Edit</a></td>
+            <td><a href="@Url.Action("Delete", new {id=data.tid})">Delete</a></td>
+        </tr>
+    }
+</table>
+
