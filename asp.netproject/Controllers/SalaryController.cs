@@ -14,8 +14,9 @@ namespace asp.netproject.Controllers
         MainEntities db = new MainEntities();
         public ActionResult Salary()
         {
-            List<employee_salary_details> all_data = db.employee_salary_details.ToList();
-            return View(all_data);
+            var employeesalary=db.employee_salary_details.ToList();
+            //List<employee_salary_details> all_data = db.employee_salary_details.ToList();
+            return View(employeesalary);
         
         }
        
@@ -27,7 +28,26 @@ namespace asp.netproject.Controllers
         }
 
         [HttpPost]
-        public ActionResult adddata(employee_salary_details add)
+        public ActionResult Search(DateTime? begindate ,DateTime? enddate, string employeename)
+        {
+            List<employee_salary_details> search = db.employee_salary_details.ToList();
+            if (begindate!=null && enddate!=null)
+            {
+                search=search.Where(x=>begindate <=x.paid_date && enddate>=x.paid_date).ToList();
+            }
+            if (employeename != null)
+            {
+                search = search.Where(x=>x.record.Firstname==employeename).ToList();
+            }
+            return View("Salary", search);
+        }
+        //public ActionResult Salary(DateTime dat)
+        //{
+        //    var results = db.employee_salary_details.Where(x => x.paid_date == dat).ToList();
+        //    return View(results);
+
+        //}
+        public ActionResult add(employee_salary_details add)
         {
             db.employee_salary_details.Add(add);
             db.SaveChanges();
@@ -46,5 +66,6 @@ namespace asp.netproject.Controllers
             db.SaveChanges();
             return RedirectToAction("Salary");
         }
+      
     }
 }
